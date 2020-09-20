@@ -1,0 +1,19 @@
+name: server-manager
+recipe: lamp
+config:
+  webroot: .
+services:
+  database:
+    type: mysql
+    portforward: true
+    creds:
+      user: mysql
+      password: mysql
+      database: lamp
+  pma:
+    type: phpmyadmin
+proxy:
+  appserver:
+    - server-manager.lndo.site
+  pma:
+    - pma.lndo.site
