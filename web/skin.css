@@ -1,0 +1,413 @@
+/* reset **********************************************************************/
+* {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* font awesome ***************************************************************/
+.action-links a:before,
+.logout-link a:before,
+div.status:before,
+div.warning:before,
+div.error:before {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* layout *********************************************************************/
+body {
+  margin: 0;
+  padding: 60px;
+  background: #ffffff;
+}
+
+body div.page {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 60px;
+  background: #eeeeee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+/* fonts **********************************************************************/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 40px;
+}
+
+.form-item label {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
+.form-item input.form-text,
+.form-item input.form-email,
+.form-item input.form-password,
+.form-item textarea.form-textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.form-actions input.form-submit {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
+/* tables *********************************************************************/
+table {
+  width: 100%;
+  margin: 0 0 2em;
+}
+
+table tr th,
+table tr td {
+  padding: 1em 0.5em;
+  background: none !important;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+}
+
+table tr:nth-child(even) td,
+table tr.even {
+  background: none !important;
+}
+
+table tr:nth-child(odd) td,
+table tr.odd {
+  background: #e5e5e5 !important;
+}
+
+table tr th,
+table tr th ul li,
+table tr th ol li,
+table tr th p {
+  color: inherit;
+  text-align: left;
+  margin: 0;
+}
+
+table tr th ul,
+table tr th ol,
+table tr td ul,
+table tr td ol {
+  padding: 0 0 0 20px;
+}
+
+table tr td,
+table tr td ul li,
+table tr td ol li,
+table tr td p {
+  color: inherit;
+  margin: 0;
+}
+
+table tr th a,
+table tr th a:link,
+table tr th a:visited {
+  color: inherit !important;
+}
+
+table tr th a:hover,
+table tr th a:focus,
+table tr th a:active {
+  color: inherit !important;
+}
+
+/* action links ***************************************************************/
+.action-links {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  list-style-type: none;
+}
+
+.action-links a {
+  position: relative;
+  padding: 0 0 0 1.5em;
+  margin: 0 1em 0 0;
+  background: none;
+}
+
+.action-links a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\f067";
+}
+
+/* log out links **************************************************************/
+.logout-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  list-style-type: none;
+}
+
+.logout-link a {
+  position: relative;
+  padding: 0 0 0 1.5em;
+  margin: 0;
+  background: none;
+}
+
+.logout-link a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\f00d";
+}
+
+
+/* messages *******************************************************************/
+div.messages {
+  position: relative;
+  margin: 1em 0;
+  padding: 1em 1em 1em 3em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+div.status {
+  background: #f4f7f5;
+  border: 1px dashed #1f5f36;
+  border-left: 8px solid #1f5f36;
+  color: #1f5f36;
+}
+
+div.warning {
+  background: #fefaf4;
+  border: 1px dashed #eca12c;
+  border-left: 8px solid #eca12c;
+  color: #eca12c;
+}
+
+div.error {
+  background: #f8f4f4;
+  border: 1px dashed #7e2325;
+  border-left: 8px solid #7e2325;
+  color: #7e2325;
+}
+
+div.status:before,
+div.warning:before,
+div.error:before {
+  position: absolute;
+  top: 50%;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+  margin: -1em 0 0 0;
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+div.status:before {
+  content: "\f058";
+}
+
+div.warning:before {
+  content: "\f06a";
+}
+
+div.error:before {
+  content: "\f057";
+}
+
+/* form ***********************************************************************/
+form {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 3em;
+  border: 1px dashed #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* form item ******************************************************************/
+div.form-item {
+  width: 100%;
+  margin: 1em 0;
+}
+
+/* label **********************************************************************/
+.form-item label {
+  display: block;
+  margin: 0 0 0.5em;
+  cursor: pointer;
+}
+
+/* text, email & textarea *****************************************************/
+.form-item input.form-text,
+.form-item input.form-email,
+.form-item input.form-password,
+.form-item textarea.form-textarea {
+  width: 100%;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  display: block;
+  color: inherit;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.form-item input.form-text,
+.form-item input.form-email,
+.form-item input.form-password,
+.form-item textarea.form-textarea {
+  width: 100%;
+}
+
+.form-item input.form-text,
+.form-item input.form-email,
+.form-item input.form-password {
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+.form-item textarea.form-textarea {
+  height: 8em;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  resize: none;
+  overflow: auto;
+}
+
+.form-item input.form-text:focus,
+.form-item input.form-email:focus,
+.form-item input.form-password:focus,
+.form-item textarea.form-textarea:focus {
+  border: 1px solid #1f5f36;
+}
+
+/* submit *********************************************************************/
+.form-actions {
+  margin: 2em 0 0;
+  padding: 2em 0 0;
+  border-top: 1px dashed #e5e5e5;
+}
+
+.form-actions input.form-submit {
+  display: block;
+  float: right;
+  margin: 0 0 0 2em;
+  padding: 0.5em 1em;
+  min-width: 7em;
+  max-width: 100%;
+  height: 3em;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+.form-actions input.form-submit:hover {
+  opacity: 0.9;
+}
+
+.form-actions input.form-submit:active {
+  opacity: 1;
+}
+
+.form-actions input.form-submit {
+  color: #fefaf4;
+  background: #eca12c;
+  border: 1px dashed #eca12c;
+}
+
+.form-actions input.form-submit:active {
+  color: #eca12c;
+  background: #fefaf4;
+  border: 1px dashed #eca12c;
+}
+
+/* validation *****************************************************************/
+.marker {
+  color: #7e2325;
+}
+
+.form-item input.form-text.error,
+.form-item input.form-email.error,
+.form-item input.form-password.error,
+.form-item textarea.form-textarea.error {
+  color: #7e2325;
+  background: #f8f4f4;
+  border: 1px solid #7e2325;
+}

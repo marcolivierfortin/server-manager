@@ -1,7 +1,7 @@
 name: server-manager
 recipe: lamp
 config:
-  webroot: .
+  webroot: web
 services:
   database:
     type: mysql

@@ -61,8 +61,8 @@ $route['authenticate/logout'] = 'authenticate/logout';
 
 // Routes for the server management.
 $route['servers/list'] = 'servers/index';
-$route['servers/add'] = 'servers/add';
-$route['servers/add/process'] = 'servers/addprocess';
+$route['servers/create'] = 'servers/create';
+$route['servers/create/process'] = 'servers/createprocess';
 $route['servers/edit/:server_id'] = 'servers/edit';
 $route['servers/edit/process'] = 'servers/editprocess';
 $route['servers/delete/:server_id'] = 'servers/delete';
