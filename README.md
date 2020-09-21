@@ -1,4 +1,4 @@
-# Server Mamager
+# Server Manager
 
 ## Requirements
 
