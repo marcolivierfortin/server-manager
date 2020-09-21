@@ -18,13 +18,21 @@ Move in the project directory.
 
 `cd server-manager/`
 
-Start the Lando containers
+Start the Lando containers.
 
 `lando start`
 
-Import the MySQL database
+Import the MySQL database.
 
 `lando db-import database/db.sql`
+
+Access the web application in your favorite browser with the following address. Note that the SSL certificate is not verified so you will need to manually approve it in the browser.
+
+https://server-manager.lndo.site/
+
+If you decide to use Docker directly without Lando, note that the provided URL will not work, you will have a different URL and to make sure that the application is working with you URL, you will need to change the URL in this configuration file `web/application/config/config.php` at line 26.
+
+`$config['base_url'] = 'https://server-manager.lndo.site/';`
 
 ## Use the application
 
